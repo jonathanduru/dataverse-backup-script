@@ -162,7 +162,7 @@ If something goes wrong, here are common issues and how to fix them:
   - Make sure **ODBC Driver 18 for SQL Server** is installed.
   - Verify the `DB_SERVER`, `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` values in `.env`.
 
-**![NEED](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/PipInstallSuccess.png)**
+**![Server Firewall](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/Server_Firewall.png)**
 
 ---
 
