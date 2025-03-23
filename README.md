@@ -19,7 +19,7 @@ It uses:
 
 ---
 
-📸 **[Insert screenshot of your GitHub repo with README + description]**
+**![Project Overview Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/master/images/Screenshot%202025-03-23%20143043.png)**
 
 ---
 
@@ -37,7 +37,7 @@ Before running the script, make sure you have the following ready:
   - Database name
   - Username and password
 
-📸 **[Insert screenshot of your Azure SQL database + connection settings]**
+**![SQL Database Overview Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/Screenshot%202025-03-23%20145532.png)**
 
 ---
 
@@ -46,7 +46,7 @@ Before running the script, make sure you have the following ready:
 - Use an existing Dataverse environment with ticket data
 - Copy your **CRM URL** (e.g., `https://yourorg.crm.dynamics.com`)
 
-📸 **[Insert screenshot of your Dataverse table or the Tickets entity in CRM]**
+**![Tickets Table Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/TicketsTable.png)**
 
 ---
 
@@ -55,12 +55,19 @@ Before running the script, make sure you have the following ready:
 - Go to Azure Portal → **App registrations** → **New registration**
 - Select “Accounts in this org only”
 - After registering:
-  - Copy the **Client ID**
-  - Copy the **Tenant ID**
-- Add **Dynamics CRM delegated permissions**
+  - Note the **Client ID**
+  - Note the **Tenant ID**
+    
+**![App Registrations 1](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/AppRegistrations1.png)**
+
+- Go to the **API permissions** tab
+  - Click **Add a permission**
+  - Choose **Dynamics 365** → then select **Delegated permissions**
+  - Check **user_impersonation**
+  - Click **Add permissions**
 - Click **Grant admin consent**
 
-📸 **[Insert screenshot of the App Registration and permissions added]**
+**![App Registrations 2](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/AppRegistrations2.png)**
 
 ---
 
