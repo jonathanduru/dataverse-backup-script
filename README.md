@@ -46,7 +46,7 @@ Before running the script, make sure you have the following ready:
 - Use an existing Dataverse environment with ticket data
 - Copy your **CRM URL** (e.g., `https://yourorg.crm.dynamics.com`)
 
-**![Tickets Table Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/TicketsTable.png)**
+**![Tickets Table Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/PowerApps_Tickets.png)**
 
 ---
 
@@ -80,7 +80,7 @@ Before running the script, make sure you have the following ready:
 pip install msal requests pyodbc python-dotenv
 ```
 
-📸 **[Insert screenshot of your VS Code terminal with pip install success]**
+**![pip Install Success](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/PipInstallSuccess.png)**
 
 
 ---
@@ -112,15 +112,24 @@ What the script does:
 > TICKET_TABLE=dbo.Tickets
 > ```
 
-📸 **[Insert screenshot of your terminal showing “X tickets inserted successfully.”]**
+**![Python Script Run](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/ScriptRun.png)**
 
 ---
 
-### 6. Troubleshooting & Common Issues
+### 6. Final Notes
+
+You're now backing up ticket data from **Microsoft Dataverse** into **Azure SQL** using a clean and secure Python script.  
+It authenticates via Azure AD, queries data through the Web API, and writes it to SQL using an upsert pattern.
+
+**![Updated Table in SSMS](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/TableINssms.png)**
+
+---
+
+### 7. Troubleshooting & Common Issues
 
 If something goes wrong, here are common issues and how to fix them:
 
----
+
 
 #### Authentication Issues
 
@@ -130,9 +139,9 @@ If something goes wrong, here are common issues and how to fix them:
   - Make sure you **granted admin consent** in Azure.
   - Confirm the `CLIENT_ID` and `TENANT_ID` in your `.env` file match your Azure App.
 
-📸 **[Insert screenshot of your Azure App registration permissions panel]**
+**![App Registrations 2](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/AppRegistrations2.png)**
 
----
+
 
 #### Dataverse Fetch Issues
 
@@ -141,9 +150,9 @@ If something goes wrong, here are common issues and how to fix them:
   - Ensure the table name and fields in your API URL are correct.
   - Confirm the record type exists and has data in your Dataverse environment.
 
-📸 **[Insert screenshot of your Dataverse table with sample ticket rows visible]**
+**![Tickets Table Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/TicketsTable.png)**
 
----
+
 
 #### SQL Insert/Connection Issues
 
@@ -153,16 +162,7 @@ If something goes wrong, here are common issues and how to fix them:
   - Make sure **ODBC Driver 18 for SQL Server** is installed.
   - Verify the `DB_SERVER`, `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` values in `.env`.
 
-📸 **[Insert screenshot of SQL Server firewall settings or local error message]**
-
----
-
-### 7. Final Notes
-
-You're now backing up ticket data from **Microsoft Dataverse** into **Azure SQL** using a clean and secure Python script.  
-It authenticates via Azure AD, queries data through the Web API, and writes it to SQL using an upsert pattern.
-
-📸 **[Insert final screenshot of your SQL table showing inserted ticket records]**
+**![NEED](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/PipInstallSuccess.png)**
 
 ---
 
