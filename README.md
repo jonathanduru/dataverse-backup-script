@@ -87,18 +87,6 @@ pip install msal requests pyodbc python-dotenv
 
 ### 5. Running the Script
 
-Once setup is complete, run the script from your terminal:
-
-```bash
-python backup_dataverse_tickets.py
-```
-
-What the script does:
-
-- Prompts Azure AD login (interactive browser opens on first run)
-- Fetches ticket records from your Dataverse table via Web API
-- Inserts records into your Azure SQL table using an upsert pattern (delete + insert)
-
 > **Note:** Make sure you’ve created a `.env` file in the project folder with your connection details and Azure credentials.  
 > Example:
 > ```env
@@ -111,6 +99,21 @@ What the script does:
 > CRM_URL=https://yourorg.crm.dynamics.com/api/data/v9.2/tickets
 > TICKET_TABLE=dbo.Tickets
 > ```
+>- **Never commit your `.env` file**  
+  Confirm `.gitignore` is working to keep sensitive data out of version control
+
+Once setup is complete, run the script from your terminal:
+
+```bash
+python backup_dataverse_tickets.py
+```
+
+What the script does:
+
+- Prompts Azure AD login (interactive browser opens on first run)
+- Fetches ticket records from your Dataverse table via Web API
+- Inserts records into your Azure SQL table using an upsert pattern (delete + insert)
+
 
 **![Python Script Run](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/ScriptRun.png)**
 
