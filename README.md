@@ -19,7 +19,10 @@ It uses:
 
 ---
 
-**![Project Overview Screenshot](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/master/images/Screenshot%202025-03-23%20143043.png)**
+> **Demo in Action**  
+> This demo shows a Python script securely backing up Dataverse records to Azure SQL with no server required — in a production environment, this would run automatically via a scheduled task:
+
+**![Project Overview GIF](https://raw.githubusercontent.com/jonathanduru/dataverse-backup-script/refs/heads/master/images/dataverse_backup-demo2.gif)**
 
 ---
 
